@@ -1,0 +1,22 @@
+{
+    "name": "notification/notification",    
+    "type": "library",
+    "description": "Notificationt",
+    "keywords": ["Notification"],
+    "homepage": "http://ludvigskoglund.se",
+    "license": "",
+    "authors": [
+        {
+            "name": "Ludvig Skoglund",
+            "email": "skoglund.ludvig@gmail.com",
+            "homepage": "http://ludvigskoglund.se",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": { "notification\\": "src/" }
+    }
+}
