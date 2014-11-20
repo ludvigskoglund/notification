@@ -10,13 +10,13 @@ notification
          
 #### Step 2. Add this in your controller or where ever you want your notification    
 
-            $this->session();    
-            $this->notification->insertMessage("Your message", "#color");     
+            
+            $app->notification->insertMessage("Your message", "#color");     
         
 #### Step 3. Add this where you want the message to show    
 
-            $this->session();     
- 	$this->notification->showMessage();
+
+ 	$app->notification->showMessage();
  	
 
 ## Good luck!
