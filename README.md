@@ -4,7 +4,7 @@ notification
 
 #### Step 1. Add this code to your CDIFactoryDefault.php   
             $this->setShared('notification', function() {    
-            $notify = new \Anax\notification\Cnotify($this);    
+            $notify = new \notification\notification\Cnotify($this);    
             return $notify;     
         });
          
