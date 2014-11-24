@@ -7,25 +7,33 @@ class Cnotify{
 
 use \Anax\DI\TInjectable;
 
+public function __construct($di){
+        $this->di = $di;
+    }
 
-
-public function insertMessage($message, $color){
-	 $_SESSION['notificationMessage'] =  "<div style='background-color:". $color . "'>". $message." </div>";
-
-
-	
+public function insertMessage($message){
+    
+    $content = "<div class='alert alert-success' role='alert'>". $message." </div>";
+    $this->session->set('notificationMessage', $content);
+    
 }
 
 public function showMessage()
     {
-        if(!is_null($_SESSION['notificationMessage'])) {
-            echo $_SESSION['notificationMessage'];
-                    $_SESSION['notificationMessage'] = null;
+        $ok = $this->session->has('notificationMessage');
+        if($ok){
+            echo $this->session->get("notificationMessage");
+            $this->clearSession();
         }
         else{
-        	
+
         }
         
+        
+    }
+
+    public function clearSession(){
+        $this->session->set('notificationMessage', null);
     }
 
 
@@ -34,4 +42,6 @@ public function showMessage()
 
 
 }
+
+
 
